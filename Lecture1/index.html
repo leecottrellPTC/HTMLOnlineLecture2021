@@ -1,0 +1,30 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>This is my first page</title>
+        <style>
+            body{
+                background-color: blueviolet;
+                color:beige;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="theHeader">Welcome to HTML</h1>
+        <p>HTML is cool, it handles content and structure</p>
+
+        <button onclick="alert('You clicked me');">Click Me!</button>
+        <button onclick="document.getElementById('theHeader').innerHTML='Lee Cottrell';">Change title</button>
+        
+        <h2>JavaScript</h2>
+        <p>JavaScript handles functionality of a website</p>
+
+        <h2>CSS</h2>
+        <p>Cascading Style Sheets is the pretty part of a webpage</p>
+        <footer>
+            <script>
+                document.write("Page last modified " + document.lastModified);
+            </script>
+        </footer>
+    </body>
+</html>
