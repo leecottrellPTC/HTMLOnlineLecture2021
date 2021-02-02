@@ -1,0 +1,62 @@
+<!doctype HTML>
+<html>
+
+<head>
+    <title>Die Roller</title>
+</head>
+
+<body>
+    <!--Put your content here-->
+    <h1>Die Roller!</h1>
+    <img src="images/allDice.png" id="die1" alt="Image of 6 dice" title="Image of 6 dice" width="150">
+    <img src="images/allDice.png" id="die2" alt="Image of 6 dice" title="Image of 6 dice" width="150">
+    <p id="dieTotal"></p>
+    <!--id anything you want to mess with in JavaScript-->
+    <!--Document Object Model (DOM)-->
+    <button onclick="rollTheDice();">Roll the dice</button>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/JApDdCVg6Dw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <script>
+        function rollTheDice(){
+            //alert("It works");
+            var d1 = 0;
+            var d2 = 0;
+
+            //JS will determine data types on use
+
+            d1 = Math.random() *6 + 1;
+            d1 = Math.trunc(d1);    //chop off the decimal points
+
+            //display the image
+            //string concatenation to display the image
+            //   images/1.png
+            document.getElementById("die1").src = "images/" + d1 + ".png";
+            document.getElementById("die1").alt = "Die " + d1;
+            document.getElementById("die1").title = "Die " + d1;
+
+            //die 2 roll here
+            d2 = Math.random() *6 + 1;
+            d2 = Math.trunc(d2);    //chop off the decimal points
+
+            //display the image
+            //string concatenation to display the image
+            //   images/1.png
+            document.getElementById("die2").src = "images/" + d2 + ".png";
+            document.getElementById("die2").alt = "Die " + d2;
+            document.getElementById("die2").title = "Die " + d2;
+
+            var dieTotal = d1 + d2;
+
+            //temp display the random number
+            document.getElementById("dieTotal").innerHTML = dieTotal;
+
+
+
+        }
+
+    </script>
+
+</body>
+
+</html>
