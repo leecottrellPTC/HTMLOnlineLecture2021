@@ -1,0 +1,33 @@
+/*selectors allow you to define rules for HTML tags*/
+
+@import url('https://fonts.googleapis.com/css2?family=Hanalei&display=swap');
+body{
+    background-color:#06425c;
+    color:#cdb879;
+    
+    
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+h1{
+    text-align:center;
+    color:#f2f2f2;
+    font-family: 'Hanalei', cursive;
+    font-size:36pt;
+}
+
+h2{
+    color:#f2f2f2;
+    margin-bottom:0em;
+    padding-bottom:0em;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+/*css BOX Model*/
+
+p{
+    margin-top:0em;
+    margin-left:1.5em;
+}
+

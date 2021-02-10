@@ -1,0 +1,54 @@
+<!doctype HTML>
+<html>
+<head>
+    <title>Moes Bar</title>
+</head>
+<body>
+    <h1>Moes Bar</h1>
+    <form id="ageForm" name="ageForm">
+        How old are you?
+       <!-- <input type="number" id="yourAge">-->
+       <select id="yourAge">
+          <script>
+              var a = 0;
+              for(a = 1; a <= 150; a++){
+                document.write("<option>" + a + "</option>");
+              }
+
+          </script>
+       </select>
+    </form>
+   <button onclick="serveDrink();">Get a drink</button>
+    <h2 id="yourAge"></h2>
+    <h2 id="yourDrink"></h2>
+    <img src="" id="drinkImage" height="400">
+
+    <script>
+        function serveDrink(){
+            var age = 0;
+            age = document.getElementById("yourAge").value;
+
+            if(age >= 21){
+                document.getElementById("yourDrink").innerHTML = "Have a Duff beer";
+                document.getElementById("drinkImage").src = "images/duff.jpg";
+            }
+            else if(age >=5 && age < 21){
+                document.getElementById("yourDrink").innerHTML = "Have some Cola";
+                document.getElementById("drinkImage").src = "images/simpsonCola.jpg";
+            }
+            else if(age >=0 && age < 5){
+                document.getElementById("yourDrink").innerHTML = "Have some Malk";
+                document.getElementById("drinkImage").src = "images/malk.jpg";
+            }
+            else{
+                //errors run here
+                document.getElementById("yourDrink").innerHTML = "<b>No drink for you, enter a valid age</b>";
+                document.getElementById("drinkImage").src = "";
+            }
+
+            //alert(age);
+        }
+
+    </script>
+</body>
+</html>
