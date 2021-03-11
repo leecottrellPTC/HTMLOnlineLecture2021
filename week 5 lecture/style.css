@@ -1,0 +1,57 @@
+.left{
+    font-size:xx-large;
+    width:50%;
+    background-color: brown;
+    float:left;
+    display:block;
+}
+.right{
+    font-size:xx-large;
+    width:50%;
+    background-color: blue;
+    float:left;
+    display:block;
+}
+
+h1{
+    clear:both;/*turns off float*/
+}
+
+@media only screen and (min-width:768px){
+    /*desktops and tablets*/
+    body{
+        background-color: blueviolet;
+    }
+
+}
+@media only screen and (max-width:767px){
+    /*phones*/
+    body{
+        background-color: yellow;
+    }
+    /*make the items stack
+    turn off wide properties and adjust to phone*/
+    .left{
+        width:100%;
+        float:none;
+    }
+
+    .right{
+        width:100%;
+        float:none;
+    }
+
+}
+
+
+
+
+@media only screen and (max-width:767px) and (orientation: portrait){
+    /*portrait phones*/
+
+}
+
+@media only screen and (max-width:767px) and (orientation: land){
+    /*portrait phones*/
+
+}
